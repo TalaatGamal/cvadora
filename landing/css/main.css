@@ -117,7 +117,7 @@ header nav .links .nmk:hover{
   width: 100vw;
   min-height: 20vh;
   position: absolute;
-  top: 90vh;
+  top: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +142,7 @@ header nav .links .nmk:hover{
   width: 100vw;
   min-height: 20vh;
   position: absolute;
-  top: 90vh;
+  top: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,7 +199,7 @@ section{
   cursor: pointer;
 }
 .main{
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: rgba(122, 7, 7, 0.199);
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
@@ -229,7 +229,9 @@ section{
   margin: 0px 0px 10px 0px;
 }
 .main3{
-  background-color: rgba(255, 255, 255, 0.199);
+  /* background-color: rgba(255, 255, 255, 0.199); */
+  background-color: rgba(122, 7, 7, 0.199);
+
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
@@ -242,6 +244,7 @@ section{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 15vh;
 }
 .main3 .left{
   width: 50%;
