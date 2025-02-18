@@ -241,6 +241,7 @@ header nav .right .list{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  border-radius: 50px 50px 0px 0px;
 }
 .info .left{
   width: 50%;
@@ -273,7 +274,7 @@ header nav .right .list{
   justify-content: center;
   border-radius: 20px;
   padding: 10px;
-  text-align: center;
+  text-align: left;
 }
 .vnm{
   color: #007089;
@@ -492,8 +493,9 @@ header nav .right .list{
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  /* padding-top: 6vh; */
+  padding-top: 6vh;
   background-color: #DBDBDB;
+  border-radius: 0px 0px 50px 50px;
 }
 .templates .top{
   /* background-color: #000; */
@@ -661,9 +663,10 @@ button:hover {
 .feedback{
   width: 100vw;
   min-height: 100vh;
-  background-color: #DBDBDB;
+  /* background-color: #00000037; */
   /* background: linear-gradient(to right 70deg, red , green); */
-  background: linear-gradient(30deg, #0f9a88, #DBDBDB 40%);
+  /* background: linear-gradient(30deg, #0f9a88, #DBDBDB 40%); */
+  /* background: linear-gradient(-220deg, #DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB,#DBDBDB, #0f9a88, #0f9a88, #0f9a88, #0f9a88, #0f9a88, #0f9a88); */
 }
 .dev{
   width: 100vw;
@@ -674,6 +677,12 @@ button:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50px 50px 0px 0px;
+  /* background: linear-gradient(-200deg ,#DBDBDB,#DBDBDB , #DBDBDB , #0f9a88 50%); */
+  background: linear-gradient(-220deg, #0f9a88, #0f9a88, #0f9a88, #DBDBDB,#DBDBDB,#DBDBDB, #0f9a88,#0f9a88, #0f9a88, #0f9a88,#0f9a88, #0f9a88, #0f9a88, #0f9a88, #0f9a88, #0f9a88);
+  /* box-shadow: #0f9a88 0px 0px 20px 10px; */
 }
 .img-dev,.me-dev,.ser-dev,.my-site{
   min-width: 300px;
@@ -689,7 +698,7 @@ button:hover {
   width: 100%;
 }
 .title-dev h2{
-  color: #007267;
+  color: #363636;
   font-weight: 600;
 }
 .vbn-con{
@@ -702,16 +711,16 @@ button:hover {
   width: 100%;
 }
 .vbn-con h2{
-  color: #454545;
+  color: #ffffff;
   font-weight: 600;
 }
 .vbn-con a{
-  color: #005b94;
+  color: #003046;
 }
 #vn{
   padding: 10px 20px 10px 20px;
   background-color: #000;
-  border-radius: 100px;
+  border-radius: 10px;
   color: #ffffff;
   animation: cvb 3s infinite linear;
 }
