@@ -65,8 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const carousel = document.getElementById("carousel");
+const carousel2 = document.getElementById("carousel2");
+
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
+
+const leftBtn2 = document.getElementById("leftBtn2");
+const rightBtn2 = document.getElementById("rightBtn2");
 
 const cardsData = [
     { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", link: "https://example.com/card1", buttonText: "Card 1" },
@@ -92,15 +97,24 @@ function createCard(data) {
 
 function initializeCarousel() {
     cardsData.forEach(cardData => carousel.appendChild(createCard(cardData)));
+    cardsData.forEach(cardData => carousel2.appendChild(createCard(cardData)));
 }
 
 function moveRight() {
+    const firstCard2 = carousel2.firstElementChild;
+    carousel2.appendChild(firstCard2.cloneNode(true)); // إضافة نسخة من أول كارد في النهاية
+    carousel2.removeChild(firstCard2); // حذف الأصل
+
     const firstCard = carousel.firstElementChild;
     carousel.appendChild(firstCard.cloneNode(true)); // إضافة نسخة من أول كارد في النهاية
     carousel.removeChild(firstCard); // حذف الأصل
 }
 
 function moveLeft() {
+    const lastCard2 = carousel2.lastElementChild;
+    carousel2.insertBefore(lastCard2.cloneNode(true), carousel2.firstElementChild); // إضافة نسخة من آخر كارد في البداية
+    carousel2.removeChild(lastCard2); // حذف الأصل
+
     const lastCard = carousel.lastElementChild;
     carousel.insertBefore(lastCard.cloneNode(true), carousel.firstElementChild); // إضافة نسخة من آخر كارد في البداية
     carousel.removeChild(lastCard); // حذف الأصل
@@ -114,11 +128,28 @@ leftBtn.addEventListener("click", () => {
     moveLeft();
 });
 
+rightBtn2.addEventListener("click", () => {
+    moveRight();
+});
+
+leftBtn2.addEventListener("click", () => {
+    moveLeft();
+});
+
 // التمرير بالسهم
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight") {
         moveRight();
     } else if (e.key === "ArrowLeft") {
+        moveLeft();
+    }
+});
+
+// التمرير بالسهم
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight2") {
+        moveRight();
+    } else if (e.key === "ArrowLeft2") {
         moveLeft();
     }
 });
