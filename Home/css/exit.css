@@ -162,6 +162,31 @@
   min-height: 100vh;
   background-color: #DBDBDB;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* choose */
+
+
+
+
+
+
 .templates .top2{
   /* background-color: #000; */
   width: 80%;
@@ -193,6 +218,33 @@
     box-shadow: #000 600px 0px 0px 0px inset;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* items */
+
+
+
+
+
 
 
 .items{
@@ -305,4 +357,136 @@
   font-size: 14px;
   color: white;
   font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fill */
+
+
+
+.fill{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.fill-div{
+  width: 50%;
+  min-height: 100vh;
+  background-color: #aa0909;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fill-view{
+  width: 50%;
+  min-height: 200vh;
+  background-color: #c08686;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.cv-template{
+  width: 700px;
+  min-height: 500px;
+  padding: 30px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cv-test{
+  width: 100%;
+  height: 100%;
+  /* border: #000 solid 2px; */
+  color: #2d2d2d;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+}
+.cv-test a{
+  color: #0097a1;
+}
+.cv-test .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  /* background-color: #007bff; */
+}
+.t-media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.tm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.summary{
+  /* background-color: #000; */
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.summary h2{
+  font-weight: 600;
+}
+.summary h4{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.summary hr{
+  border: #000 solid 1px;
+}
+.job{
+  width: 100%;
+}
+.job .job-v{
+  margin: 10px 0px 20px 0px;
+}
+.job2 .job-v{
+  margin: 10px 0px 20px 0px;
+}
+.br{
+  width: 100%;
+  height: 10px;
+  background-color: #00000000;
 }

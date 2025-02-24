@@ -7,7 +7,6 @@
   font-weight: 500;
   font-style: normal;
   font-variation-settings:"slnt" 0;
-  color: #ffffff;
 }
 html{
   scroll-behavior: smooth;
@@ -24,9 +23,11 @@ body{
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  color: #ffffff;
 }
 a{
   text-decoration: none;
+  color: #ffffff;
 }
 .main-cover{
   width: 100vw;
