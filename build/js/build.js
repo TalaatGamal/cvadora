@@ -172,12 +172,12 @@ const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
 const cardsData = [
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca1", buttonText: "Card 1" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca2", buttonText: "Card 2" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca3",buttonText: "Card 3" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca4",buttonText: "Card 4" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca5",buttonText: "Card 5" },
-    { image: "https://www.cv-template.com/img/cv-tips/advantage-of-an-online-cv-builder.jpg", id: "ca6",buttonText: "Card 6" }
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca1",numText:"1",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca2",numText:"2",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca3",numText:"3",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca4",numText:"4",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca5",numText:"5",buttonText: "Choose" },
+    { image: "https://www.cv-template.com/img/cv-tips/advantage-of-an-online-cv-builder.jpg", id: "ca6",numText:"6",buttonText: "Choose" }
 ];
 
 function createCard(data) {
@@ -188,7 +188,7 @@ function createCard(data) {
         <div class="topo">
             <img src="${data.image}" alt="">
         </div>
-        <div class="boto"><a href="#" id="${data.id}">${data.buttonText}</a></div>
+        <div class="boto"><h2 id="h2b">${data.numText}</h2><a href="#" id="${data.id}">${data.buttonText}</a></div>
     `;
     return card;
 }
@@ -296,12 +296,15 @@ let hello = document.querySelector(".hello")
 let loadcv = document.getElementById("odn")
 let loadwindow = document.getElementById("load")
 let back = document.getElementById("back-window")
+let other = document.getElementById("other-temp")
+let otherWindow = document.getElementById("other-window")
+let dont = document.getElementById("dont")
+let dov = document.getElementById("do")
 
 
 
 if (choose) {
   choose.addEventListener("click", function () {
-    console.log("choose1")
     fill.style.width="100vw"
     fill.style.height="100vh"
     tem.style.display="none"
@@ -357,6 +360,37 @@ if (loadcv) {
   loadwindow.style.height="0vh"
 }
 
+if (other) {
+    other.addEventListener("click", function () {
+      otherWindow.style.width="100vw"
+      otherWindow.style.height="100vh"
+    });
+}
+
+if (dont) {
+    dont.addEventListener("click", function () {
+      otherWindow.style.width="0vw"
+      otherWindow.style.height="0vh"
+    });
+}
+
+if (dov) {
+    dov.addEventListener("click", function () {
+      otherWindow.style.width="0vw"
+      otherWindow.style.height="0vh"
+
+      fill.style.width="0vw"
+      fill.style.height="0vh"
+
+      tem.style.display="flex"
+      hello.style.display="flex"
+
+      setTimeout(() => {
+        window.location.href="build-space.html"
+      }, 600);
+
+    });
+}
 
 
 

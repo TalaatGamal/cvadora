@@ -401,7 +401,7 @@ button:hover {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 10vh 0px 10vh 0px;
+  padding: 0vh 0px 18vh 0px;
 }
 
 
@@ -410,7 +410,6 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0px;
   position: relative;
   padding: 20px 0px 20px 0px;
   overflow-x: scroll;
@@ -427,7 +426,6 @@ button:hover {
 .temp-cards {
   width: 90%;
   display: flex;
-  gap: 20px;
   overflow-x: scroll;
   padding: 0px;
   transition: 0.5s;
@@ -474,20 +472,22 @@ button:hover {
 .tpcs .boto a {
   width: 180px;
   height: 50px;
-  background-color: #0f9a88;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   font-size: 20px;
-  color: white;
+  font-weight: 600;
   text-decoration: none;
   border:  #0f9a8700 solid 3px;
+  background-color: #0f9a87af;
+  color: #ffffff;
   transition: 0.5s;
 }
 .tpcs .boto a:hover{
-background-color: #0f9a8788;
-border:  #0f9a87cb solid 3px;
+  background-color: #0f9a8700;
+  border:  #0f9a87cb solid 3px;
+  color: #ffffff;
 }
 
 button {
@@ -501,12 +501,22 @@ button {
   transition: 0.3s;
   width: 45px;
   height: 45px;
+  margin-left: 10px;
 }
 
 button:hover {
   background: #0f9a8766;
 }
-
+#h2b{
+  padding: 10px;
+  border-radius: 5px;
+  width: 50px;
+  height: 45px;
+  text-align: center;
+  margin-right: 5px;
+  background: linear-gradient(to top , #0f9a8786 , #0f9a8700);
+  border-bottom: #ffffff solid 4px;
+}
 
 
 
@@ -545,7 +555,7 @@ button:hover {
   position: absolute;
   top: 0px;
   left: 0px;
-  transition: 0.4s;
+  transition: 1s;
   z-index: 500;
 }
 .fill-div{
@@ -723,7 +733,7 @@ button:hover {
   gap: 10px;
 }
 #odn i{
-  color: #00d4b1;
+  color: #000000;
 }
 .other{
   width: 350px;
@@ -739,8 +749,57 @@ button:hover {
   opacity: 70%;
   font-size: 15px;
 }
-
-
+.other-window{
+  width: 0vw;
+  height: 0vh;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background-color: #00000056;
+  position: fixed;
+  z-index: 200000;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.other-window .orw{
+  background-color: #00605f;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  border: #bababa solid 5px;
+}
+.qwa{
+  /* background-color: #30face39; */
+  min-width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 50px;
+}
+.qwa .go{
+  padding: 10px;
+  /* background-color: #12846ca5; */
+  border: #ff000000 solid 4px;
+  border-left: #000000b6 solid 5px;
+  border-right: #000000c2 solid 5px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  background: linear-gradient(to right , #1BA877 , #ffffff0e);
+  cursor: pointer;
+}
+.ays{
+  background-color: #ff0000;
+  padding: 0px;
+  margin-bottom: 30px;
+}
 .ats{
   display: flex;
   align-items: center;
@@ -840,10 +899,10 @@ button:hover {
   transition: 0.4s;
 }
 .load-div{
-  background-color: #00281bd2;
+  background-color: #00281fd2;
   border: #00775500 solid 20px;
-  border-left: #007755 solid 20px;
-  border-right: #007755 solid 20px;
+  border-left: #007771 solid 20px;
+  border-right: #007771 solid 20px;
   width: 80%;
   height: 80%;
   border-radius: 100px;
