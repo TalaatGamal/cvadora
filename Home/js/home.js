@@ -63,19 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 const carousel = document.getElementById("carousel");
-
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
 const cardsData = [
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", link: "https://example.com/card1", buttonText: "Card 1" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", link: "https://example.com/card2", buttonText: "Card 2" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", link: "https://example.com/card3", buttonText: "Card 3" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", link: "https://example.com/card4", buttonText: "Card 4" },
-    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", link: "https://example.com/card5", buttonText: "Card 5" },
-    { image: "https://www.cv-template.com/img/cv-tips/advantage-of-an-online-cv-builder.jpg", link: "https://example.com/card6", buttonText: "Card 6" }
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca1",numText:"1",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca2",numText:"2",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca3",numText:"3",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca4",numText:"4",buttonText: "Choose" },
+    { image: "https://img.freepik.com/free-vector/minimal-resume-editable-template-cv-builder-professionals_53876-114275.jpg", id: "ca5",numText:"5",buttonText: "Choose" },
+    { image: "https://www.cv-template.com/img/cv-tips/advantage-of-an-online-cv-builder.jpg", id: "ca6",numText:"6",buttonText: "Choose" }
 ];
 
 function createCard(data) {
@@ -86,7 +84,7 @@ function createCard(data) {
         <div class="topo">
             <img src="${data.image}" alt="">
         </div>
-        <div class="boto"><a href="${data.link}">${data.buttonText}</a></div>
+        <div class="boto"><h2 id="h2b">${data.numText}</h2><a href="#" id="${data.id}">${data.buttonText}</a></div>
     `;
     return card;
 }
@@ -97,24 +95,19 @@ function initializeCarousel() {
 
 function moveRight() {
     const firstCard = carousel.firstElementChild;
-    carousel.appendChild(firstCard.cloneNode(true)); // إضافة نسخة من أول كارد في النهاية
-    carousel.removeChild(firstCard); // حذف الأصل
+    carousel.appendChild(firstCard);
 }
 
 function moveLeft() {
     const lastCard = carousel.lastElementChild;
-    carousel.insertBefore(lastCard.cloneNode(true), carousel.firstElementChild); // إضافة نسخة من آخر كارد في البداية
-    carousel.removeChild(lastCard); // حذف الأصل
+    carousel.insertBefore(lastCard, carousel.firstElementChild);
 }
 
-rightBtn.addEventListener("click", () => {
-    moveRight();
-});
+// التحكم بالأزرار
+rightBtn.addEventListener("click", moveRight);
+leftBtn.addEventListener("click", moveLeft);
 
-leftBtn.addEventListener("click", () => {
-    moveLeft();
-});
-// التمرير بالسهم
+// التحكم بلوحة المفاتيح
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight") {
         moveRight();
@@ -123,4 +116,24 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+// التحكم بالتمرير السلس
+let scrollTimeout;
+
+carousel.addEventListener("wheel", (e) => {
+    e.preventDefault();
+
+    if (scrollTimeout) return;
+
+    scrollTimeout = setTimeout(() => {
+        if (e.deltaY > 9 || e.deltaX > 9) {
+            moveRight(); 
+        } else {
+            moveLeft();
+        }
+        scrollTimeout = null;
+    },300); 
+});
+
 initializeCarousel();
+
+
