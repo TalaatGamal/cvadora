@@ -289,6 +289,7 @@ initializeCarousel();
 
 
 let fill = document.getElementById("fill")
+let downcv = document.getElementById("dcvb")
 let choose = document.getElementById("ca1")
 let tem = document.getElementById("templates")
 let hello = document.querySelector(".hello")
@@ -328,6 +329,15 @@ if (fill) {
     document.getElementById("iv-2").style.backgroundColor="#00dbdb"
     document.getElementById("qwe2").style.display="none"
     document.getElementById("right2").style.display="flex"
+  });
+}
+
+if (downcv) {
+  downcv.addEventListener("click", function () {
+  
+    document.getElementById("iv-3").style.backgroundColor="#00dbdb"
+    document.getElementById("qwe3").style.display="none"
+    document.getElementById("right3").style.display="flex"
   });
 }
 
