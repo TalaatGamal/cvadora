@@ -1,0 +1,128 @@
+
+
+
+
+
+
+
+
+
+.x-header {
+  width: 100%;
+  min-height: 8vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  background-color: #19424278;
+  padding: 0px 10vw 0px 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* display: none; */
+}
+.x-header .x-l{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 40%;
+  height: 100%;
+  /* background-color: #0e7871; */
+}
+.x-header .x-r{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 60%;
+  height: 100%;
+  /* background-color: #b0fffa; */
+}
+.top-x{
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  gap: 10px;
+  width: 100%;
+  height: 70%;
+  /* background-color: #000000; */
+}
+/* .qwe{
+  display: none;
+} */
+.top-x .num{
+  /* background-color: #401a1a; */
+  width: 160px;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.num-m{
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #1ba877;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.num-r{
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #1ba87755;
+  border: #1ba87700 solid 4px;
+  border-bottom: #1ba877 solid 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.num-r i{
+  display: none;
+}
+.bottom-x{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+  width: 100%;
+  height: 30%;
+}
+.itemv{
+  /* background-color: #37927a; */
+  background-color: #d0d0d062;
+  width: 160px;
+  height: 10px;
+  border-radius: 2px;
+}
+.x-header a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.x-header .vid{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:#37927a  0px 0px 10px 5px;
+}
+.x-header .vid video{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
