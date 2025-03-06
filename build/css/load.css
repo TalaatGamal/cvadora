@@ -10,6 +10,7 @@
 
 .load{
   background-color: #000000bd;
+  backdrop-filter: blur(5px);
   width: 0vw;
   height: 0vh;
   overflow-x: hidden;
@@ -28,18 +29,21 @@
   min-height: 100vh;
 }
 .load-div{
-  background-color: #00281fd2;
-  border: #00775500 solid 20px;
+  /* background: linear-gradient(to top , rgba(0, 118, 118, 0.701) , rgba(255, 0, 0, 0)); */
+  background: linear-gradient(to top , rgba(0, 118, 118, 0.701) , rgba(255, 0, 0, 0) 15%);
+
+  /* border: #00775500 solid 20px;
   border-left: #007771 solid 20px;
-  border-right: #007771 solid 20px;
+  border-right: #007771 solid 20px; */
   width: 80%;
   height: 80%;
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  /* color: #272727; */
 }
 .jkl{
   width: 100%;
@@ -81,8 +85,8 @@
   padding: 5px 10px 5px 10px;
   border-radius: 15px;
   border: #00775500 solid 10px;
-  border-left: #007755 solid 10px;
-  border-right: #007755 solid 10px;
+  border-left: #0199D8 solid 10px;
+  border-right: #ffffff solid 10px;
   cursor: pointer;
 }
 .donate span{
@@ -97,7 +101,8 @@
   background-size: 90%;
   background-repeat: no-repeat;
   background-color: #000000;
-  border:  #8a8a8a solid 7px;
+  border:  #00777100 solid 7px;
+  border-bottom:  #007771 solid 7px;
 }
 .loadbottom{
   /* background-color: #682e2e; */
@@ -112,13 +117,13 @@
   padding: 5px 10px 5px 10px;
   border-radius: 15px;
   border: #00775500 solid 10px;
-  border-left: #007755 solid 10px;
-  border-right: #007755 solid 10px;
+  border-left: #ffffff solid 10px;
+  border-right: #ffffff solid 10px;
   cursor: pointer;
 }
-.loadbottom h2 span{
+/* .loadbottom h2 span{
   animation: dcv 2s infinite linear;
-}
+} */
 @keyframes dcv {
   0%{
     opacity: 1;
